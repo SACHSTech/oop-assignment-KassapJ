@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Random;
 
 public class PokemonBattle{
@@ -6,6 +7,7 @@ public class PokemonBattle{
     private boolean isWildPokemon;
     private boolean isGymBattle;
     private int pkmnTrainerCount;
+    private ArrayList<PokemonTrainer> pkmnTrainers;
 
 
     public PokemonBattle(){
@@ -35,6 +37,9 @@ public class PokemonBattle{
             isGymBattle = true;
             pkmnTrainerCount = 2;
         }
+
+        createTrainers();
+        
     }
 
     public String getBackground(){
@@ -51,5 +56,38 @@ public class PokemonBattle{
     
     public int getPkmnTrainerNum(){
         return pkmnTrainerCount;
+    }
+
+    public void createTrainers(){
+        // Create an instance of the Random class
+        Random rand = new Random();
+
+        // Create required number of trainers based on randomized variables
+        for(int i = 0; i < pkmnTrainerCount; i++){
+            // first trainer is user input
+            if(i == 0){
+                pkmnTrainers.add(new PokemonTrainer());
+            }
+            // second trainer is random
+            else if(i == 1){
+                String strRandName;
+                int intRandBadges;
+                int intRandom = rand.nextInt(10);
+                // Determine Random Name
+                if(isGymBattle){
+                    if(intRandom == 0){
+                        
+                    }
+                }
+                else{
+                    if(intRandom == 0){
+
+                    }
+                }
+
+                // if gym leader, 8 badges
+                pkmnTrainers.add(new PokemonTrainer(strRandName, intRandBadges));
+            }
+        }
     }
 }

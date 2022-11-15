@@ -1,34 +1,25 @@
 public class PokemonTrainer{
     private String strTrainerName;
-    private int intTrainerAge;
     private int intTrainerBadges;
 
-    public PokemonTrainer(){
+    public PokemonTrainer(String strName, int intBadges){
 
     }
 
     public String getTrainerName(){
-
+        return strTrainerName;
     }
 
-    public void setTrainerName(){
-
-    }
-
-    public int getTrainerAge(){
-
-    }
-
-    public void setTrainerAge(){
-
+    public void setTrainerName(String x){
+        strTrainerName = x;
     }
 
     public int getTrainerBadges(){
-
+        return intTrainerBadges;
     }
 
-    public void setTrainerBadges(){
-
+    public void setTrainerBadges(int x){
+        int getTrainerBadges = x;
     }
 
 
