@@ -19,24 +19,24 @@ public class PokemonBattle{
         int intRandom = rand.nextInt(3);
         // If the number was a 0, we're in a wild pokemon battle
         if(intRandom == 0){
-            strBackground = "Wild Grass";
-            isWildPokemon = true;
-            isGymBattle = false;
-            pkmnTrainerCount = 1;
+            this.strBackground = "Wild Grass";
+            this.isWildPokemon = true;
+            this.isGymBattle = false;
+            this.pkmnTrainerCount = 1;
         }
         // If the number was a 1, it's a non gym pokemon trainer battle
         else if(intRandom == 1){
-            strBackground = "Desert";
-            isWildPokemon = false;
-            isGymBattle = false;
-            pkmnTrainerCount = 2;
+            this.strBackground = "Desert";
+            this.isWildPokemon = false;
+            this.isGymBattle = false;
+            this.pkmnTrainerCount = 2;
         }
         // If the number was a 2, it's a gym battle
         else if(intRandom == 2){
-            strBackground = "Gym";
-            isWildPokemon = false;
-            isGymBattle = true;
-            pkmnTrainerCount = 2;
+            this.strBackground = "Gym";
+            this.isWildPokemon = false;
+            this.isGymBattle = true;
+            this.pkmnTrainerCount = 2;
         }
 
         createTrainers();
@@ -76,7 +76,7 @@ public class PokemonBattle{
                 trainerName = keyboard.readLine();
                 System.out.print("Please tell me how many badges you have (up to 8): ");
                 trainerBadges = Integer.parseInt(keyboard.readLine());
-                while(trainerBadges > 8){
+                while(trainerBadges > 8 && trainerBadges >= 0){
                     System.out.println("Please tell me how many badges you have (up to 8): ");
                     trainerBadges = Integer.parseInt(keyboard.readLine());
                 }

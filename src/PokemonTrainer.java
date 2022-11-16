@@ -7,7 +7,8 @@ public class PokemonTrainer{
     private ArrayList<Items> items;
 
     public PokemonTrainer(String strName, int intBadges){
-
+        this.strTrainerName = strName;
+        this.intTrainerBadges = intBadges;
     }
 
     public String getTrainerName(){
