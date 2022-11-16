@@ -1,6 +1,10 @@
+import java.util.ArrayList;
+
 public class PokemonTrainer{
     private String strTrainerName;
     private int intTrainerBadges;
+    private ArrayList<Pokemon> pkmn;
+    private ArrayList<Items> items;
 
     public PokemonTrainer(String strName, int intBadges){
 
