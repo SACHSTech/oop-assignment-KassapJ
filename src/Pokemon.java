@@ -184,73 +184,78 @@ public class Pokemon {
                 multiplier = 0;
             }
         }
-        // work on this / ghost type
         else if(defenderType == 6){
-            if(attackerType == 2 || attackerType == 5 || attackerType == 11 || attackerType == 13){
+            if(attackerType == 3 || attackerType == 10){
                 multiplier = 0;
             }
         }
-        else if(defenderType == 2){
-            if(attackerType == 4 || attackerType == 5 || attackerType == 11 || attackerType == 13){
+        else if(defenderType == 7){
+            if(attackerType == 0 || attackerType == 4 || attackerType == 5 || attackerType == 9 || attackerType == 11){
                 multiplier = 1.25;
             }
-            else if(attackerType == 7){
+            else if(attackerType == 2 || attackerType == 7 || attackerType == 8 || attackerType == 14){
                 multiplier = 0.8;
             }
         }
-        else if(defenderType == 2){
-            if(attackerType == 4 || attackerType == 5 || attackerType == 11 || attackerType == 13){
+        else if(defenderType == 8){
+            if(attackerType == 7 || attackerType == 9 || attackerType == 14){
                 multiplier = 1.25;
             }
-            else if(attackerType == 7){
+            else if(attackerType == 11){
+                multiplier = 0.8;
+            }
+            else if(attackerType == 2){
+                multiplier = 0;
+            }
+        }
+        else if(defenderType == 9){
+            if(attackerType == 3 || attackerType == 4 || attackerType == 13){
+                multiplier = 1.25;
+            }
+            else if(attackerType == 9 || attackerType == 14){
                 multiplier = 0.8;
             }
         }
-        else if(defenderType == 2){
-            if(attackerType == 4 || attackerType == 5 || attackerType == 11 || attackerType == 13){
+        else if(defenderType == 10){
+            if(attackerType == 3){
                 multiplier = 1.25;
             }
-            else if(attackerType == 7){
+            else if(attackerType == 6){
+                multiplier = 0;
+            }
+        }
+        else if(defenderType == 11){
+            if(attackerType == 0 || attackerType == 8 || attackerType == 12){
+                multiplier = 1.25;
+            }
+            else if(attackerType == 7 || attackerType == 11){
                 multiplier = 0.8;
             }
         }
-        else if(defenderType == 2){
-            if(attackerType == 4 || attackerType == 5 || attackerType == 11 || attackerType == 13){
+        else if(defenderType == 12){
+            if(attackerType == 0){
                 multiplier = 1.25;
             }
-            else if(attackerType == 7){
+            else if(attackerType == 3 || attackerType == 12){
+                multiplier = 0.8;
+            }
+            else if(attackerType == 6){
+                multiplier = 0;
+            }
+        }
+        else if(defenderType == 13){
+            if(attackerType == 3 || attackerType == 7 || attackerType == 8 || attackerType == 14){
+                multiplier = 1.25;
+            }
+            else if(attackerType == 0 || attackerType == 4|| attackerType == 5 || attackerType == 11 || attackerType == 13){
                 multiplier = 0.8;
             }
         }
-        else if(defenderType == 2){
-            if(attackerType == 4 || attackerType == 5 || attackerType == 11 || attackerType == 13){
+        else if(defenderType == 14){
+            if(attackerType == 2 || attackerType == 7){
                 multiplier = 1.25;
             }
-            else if(attackerType == 7){
-                multiplier = 0.8;
-            }
-        }
-        else if(defenderType == 2){
-            if(attackerType == 4 || attackerType == 5 || attackerType == 11 || attackerType == 13){
-                multiplier = 1.25;
-            }
-            else if(attackerType == 7){
-                multiplier = 0.8;
-            }
-        }
-        else if(defenderType == 2){
-            if(attackerType == 4 || attackerType == 5 || attackerType == 11 || attackerType == 13){
-                multiplier = 1.25;
-            }
-            else if(attackerType == 7){
-                multiplier = 0.8;
-            }
-        }
-        else if(defenderType == 2){
-            if(attackerType == 4 || attackerType == 5 || attackerType == 11 || attackerType == 13){
-                multiplier = 1.25;
-            }
-            else if(attackerType == 7){
+            else if(attackerType == 4 || attackerType == 9){
                 multiplier = 0.8;
             }
         }
