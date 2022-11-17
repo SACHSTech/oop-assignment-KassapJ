@@ -33,7 +33,101 @@ public class Pokemon {
     } 
 
     public void createMove(){
-        moves.add(new Moves("Name", Type, specialMove, movePower, Accuracy));
+        if(this.intPokemonType == 0){
+            moves.add(new Moves("Leech Life", this.intPokemonType, false, 20, 100));
+            moves.add(new Moves("Pin Missile", this.intPokemonType, false, 42, 85));
+            moves.add(new Moves("Twineedle", this.intPokemonType, false, 25, 100));
+        }
+        else if(this.intPokemonType == 1){
+            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+        }
+        else if(this.intPokemonType == 2){
+            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+        }
+        else if(this.intPokemonType == 3){
+            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+        }
+        else if(this.intPokemonType == 4){
+            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+        }
+        else if(this.intPokemonType == 5){
+            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+        }
+        
+        else if(this.intPokemonType == 6){
+            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+        }
+        
+        else if(this.intPokemonType == 7){
+            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+        }
+        else if(this.intPokemonType == 8){
+            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+        }
+        
+        else if(this.intPokemonType == 9){
+            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+        }
+        else if(this.intPokemonType == 10){
+            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+        }
+        else if(this.intPokemonType == 11){
+            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+        }
+        
+        else if(this.intPokemonType == 12){
+            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+        }
+        else if(this.intPokemonType == 13){
+            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+        }
+        else if(this.intPokemonType == 14){
+            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+        }
+        
+        
     }
 
     public void takeDamage(int power, boolean isSpecial, int opponentType){
