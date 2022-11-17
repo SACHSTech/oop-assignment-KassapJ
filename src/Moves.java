@@ -12,4 +12,43 @@ public class Moves {
         this.intMovePower = movePower;
         this.intMoveAccuracy = Accuracy;
     }
+
+    public String getMoveName(){
+        return this.strMoveName;
+    }
+    public void setMoveName(String x){
+        this.strMoveName = x;
+    }
+    
+    public int getMoveType(){
+        return this.intMoveType;
+    }
+
+    public void setMoveType(int x){
+        this.intMoveType = x;
+    }
+    
+    public boolean getIsSpecial(){
+        return this.isSpecial;
+    }
+
+    public void setIsSpecial(boolean x){
+        this.isSpecial = x;
+    }
+    
+    public int getMovePower(){
+        return this.intMovePower;
+    }
+
+    public void setMovePower(int x){
+        this.intMovePower = x;
+    }
+    
+    public int getMoveAccuracy(){
+        return this.intMoveAccuracy;
+    }
+
+    public void setMoveAccuracy(int x){
+        this.intMoveAccuracy = x;
+    }
 }
