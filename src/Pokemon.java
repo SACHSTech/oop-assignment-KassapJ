@@ -157,37 +157,37 @@ public class Pokemon {
                 multiplier = 0.8;
             }
         }
-        // work on this next
-        else if(defenderType == 2){
-            if(attackerType == 4 || attackerType == 5 || attackerType == 11 || attackerType == 13){
+        else if(defenderType == 3){
+            if(attackerType == 5 || attackerType == 12){
                 multiplier = 1.25;
             }
-            else if(attackerType == 7){
+            else if(attackerType == 13){
                 multiplier = 0.8;
             }
         }
-        else if(defenderType == 2){
-            if(attackerType == 4 || attackerType == 5 || attackerType == 11 || attackerType == 13){
+        else if(defenderType == 4){
+            if(attackerType == 8 || attackerType == 13 || attackerType == 14){
                 multiplier = 1.25;
             }
-            else if(attackerType == 7){
+            else if(attackerType == 0 || attackerType == 7){
                 multiplier = 0.8;
             }
         }
-        else if(defenderType == 2){
-            if(attackerType == 4 || attackerType == 5 || attackerType == 11 || attackerType == 13){
+        else if(defenderType == 5){
+            if(attackerType == 2 || attackerType == 9 || attackerType == 12){
                 multiplier = 1.25;
             }
-            else if(attackerType == 7){
+            else if(attackerType == 0 || attackerType == 3 || attackerType == 7){
                 multiplier = 0.8;
+            }
+            else if(attackerType == 8){
+                multiplier = 0;
             }
         }
-        else if(defenderType == 2){
-            if(attackerType == 4 || attackerType == 5 || attackerType == 11 || attackerType == 13){
-                multiplier = 1.25;
-            }
-            else if(attackerType == 7){
-                multiplier = 0.8;
+        // work on this / ghost type
+        else if(defenderType == 6){
+            if(attackerType == 2 || attackerType == 5 || attackerType == 11 || attackerType == 13){
+                multiplier = 0;
             }
         }
         else if(defenderType == 2){
