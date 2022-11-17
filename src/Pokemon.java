@@ -132,9 +132,130 @@ public class Pokemon {
         
     }
 
-    public void takeDamage(int power, boolean isSpecial, int opponentType){
+    public void takeDamage(int power, boolean isSpecial, int attackerType, int defenderType){
         // calculate multiplier based on type difference
-        int multiplier = 1; 
+        // Super eff = * 1.25, not effective = 0.8
+        double multiplier = 1; 
+        if(defenderType == 0){
+            if(attackerType == 4 || attackerType == 5 || attackerType == 11 || attackerType == 13){
+                multiplier = 1.25;
+            }
+            else if(attackerType == 7){
+                multiplier = 0.8;
+            }
+        }
+        else if(defenderType == 1){
+            if(attackerType == 9){
+                multiplier = 1.25;
+            }
+        }
+        else if(defenderType == 2){
+            if(attackerType == 8){
+                multiplier = 1.25;
+            }
+            else if(attackerType == 2 || attackerType == 5){
+                multiplier = 0.8;
+            }
+        }
+        // work on this next
+        else if(defenderType == 2){
+            if(attackerType == 4 || attackerType == 5 || attackerType == 11 || attackerType == 13){
+                multiplier = 1.25;
+            }
+            else if(attackerType == 7){
+                multiplier = 0.8;
+            }
+        }
+        else if(defenderType == 2){
+            if(attackerType == 4 || attackerType == 5 || attackerType == 11 || attackerType == 13){
+                multiplier = 1.25;
+            }
+            else if(attackerType == 7){
+                multiplier = 0.8;
+            }
+        }
+        else if(defenderType == 2){
+            if(attackerType == 4 || attackerType == 5 || attackerType == 11 || attackerType == 13){
+                multiplier = 1.25;
+            }
+            else if(attackerType == 7){
+                multiplier = 0.8;
+            }
+        }
+        else if(defenderType == 2){
+            if(attackerType == 4 || attackerType == 5 || attackerType == 11 || attackerType == 13){
+                multiplier = 1.25;
+            }
+            else if(attackerType == 7){
+                multiplier = 0.8;
+            }
+        }
+        else if(defenderType == 2){
+            if(attackerType == 4 || attackerType == 5 || attackerType == 11 || attackerType == 13){
+                multiplier = 1.25;
+            }
+            else if(attackerType == 7){
+                multiplier = 0.8;
+            }
+        }
+        else if(defenderType == 2){
+            if(attackerType == 4 || attackerType == 5 || attackerType == 11 || attackerType == 13){
+                multiplier = 1.25;
+            }
+            else if(attackerType == 7){
+                multiplier = 0.8;
+            }
+        }
+        else if(defenderType == 2){
+            if(attackerType == 4 || attackerType == 5 || attackerType == 11 || attackerType == 13){
+                multiplier = 1.25;
+            }
+            else if(attackerType == 7){
+                multiplier = 0.8;
+            }
+        }
+        else if(defenderType == 2){
+            if(attackerType == 4 || attackerType == 5 || attackerType == 11 || attackerType == 13){
+                multiplier = 1.25;
+            }
+            else if(attackerType == 7){
+                multiplier = 0.8;
+            }
+        }
+        else if(defenderType == 2){
+            if(attackerType == 4 || attackerType == 5 || attackerType == 11 || attackerType == 13){
+                multiplier = 1.25;
+            }
+            else if(attackerType == 7){
+                multiplier = 0.8;
+            }
+        }
+        else if(defenderType == 2){
+            if(attackerType == 4 || attackerType == 5 || attackerType == 11 || attackerType == 13){
+                multiplier = 1.25;
+            }
+            else if(attackerType == 7){
+                multiplier = 0.8;
+            }
+        }
+        else if(defenderType == 2){
+            if(attackerType == 4 || attackerType == 5 || attackerType == 11 || attackerType == 13){
+                multiplier = 1.25;
+            }
+            else if(attackerType == 7){
+                multiplier = 0.8;
+            }
+        }
+        else if(defenderType == 2){
+            if(attackerType == 4 || attackerType == 5 || attackerType == 11 || attackerType == 13){
+                multiplier = 1.25;
+            }
+            else if(attackerType == 7){
+                multiplier = 0.8;
+            }
+        }
+        
+        
 
         if(isSpecial){
             this.dblPokemonHP -= ((power / (intPokemonSPDEF / 2)) * multiplier);
