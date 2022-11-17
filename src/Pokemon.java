@@ -34,97 +34,99 @@ public class Pokemon {
 
     public void createMove(){
         if(this.intPokemonType == 0){
+            // Bug 
             moves.add(new Moves("Leech Life", this.intPokemonType, false, 20, 100));
             moves.add(new Moves("Pin Missile", this.intPokemonType, false, 42, 85));
             moves.add(new Moves("Twineedle", this.intPokemonType, false, 25, 100));
         }
         else if(this.intPokemonType == 1){
-            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+            // Dragon 
+            moves.add(new Moves("Dragon Rage", this.intPokemonType, true, 40, 100));
         }
         else if(this.intPokemonType == 2){
-            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+            // Electric
+            moves.add(new Moves("Thunder", this.intPokemonType, true, 120, 70));
+            moves.add(new Moves("Thunder Punch", this.intPokemonType, true, 75, 100));
+            moves.add(new Moves("Thunder Shock", this.intPokemonType, true, 40, 100));
+            moves.add(new Moves("Thunderbolt", this.intPokemonType, true, 95, 100));
         }
         else if(this.intPokemonType == 3){
-            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+            // Fighting
+            moves.add(new Moves("Hi Jump Kick", this.intPokemonType, false, 85, 90));
+            moves.add(new Moves("Jump Kick", this.intPokemonType, false,70 , 95));
+            moves.add(new Moves("Low Kick", this.intPokemonType, false, 50, 90));
+            moves.add(new Moves("Submission", this.intPokemonType, false, 80, 80));
         }
         else if(this.intPokemonType == 4){
-            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+            // Fire
+            moves.add(new Moves("Ember", this.intPokemonType, true, 40, 100));
+            moves.add(new Moves("Fire Blast", this.intPokemonType, true, 120, 85));
+            moves.add(new Moves("Fire Punch", this.intPokemonType, true, 75, 100));
+            moves.add(new Moves("Flamethrower", this.intPokemonType, true, 95, 100));
         }
         else if(this.intPokemonType == 5){
-            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+            // Flying
+            moves.add(new Moves("Drill Peck", this.intPokemonType, false, 80, 100));
+            moves.add(new Moves("Fly", this.intPokemonType, false, 70, 95));
+            moves.add(new Moves("Peck", this.intPokemonType, false, 35, 100));
+            moves.add(new Moves("Sky Attack", this.intPokemonType, false, 140, 60));
         }
         
         else if(this.intPokemonType == 6){
-            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+            // Ghost
+            moves.add(new Moves("Lick", this.intPokemonType, false, 20, 100));
+            moves.add(new Moves("Night Shade", this.intPokemonType, false, 50, 100));
         }
         
         else if(this.intPokemonType == 7){
-            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+            // Grass
+            moves.add(new Moves("Razor Leaf", this.intPokemonType, true, 70, 100));
+            moves.add(new Moves("Solar Beam", this.intPokemonType, true, 120, 50));
         }
         else if(this.intPokemonType == 8){
-            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+            // Ground
+            moves.add(new Moves("Bone Club", this.intPokemonType, false, 65, 85));
+            moves.add(new Moves("Bonemerang", this.intPokemonType, false, 100, 90));
+            moves.add(new Moves("Dig", this.intPokemonType, false, 100, 100));
+            moves.add(new Moves("Earthquake", this.intPokemonType, false, 100, 100));
         }
         
         else if(this.intPokemonType == 9){
-            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+            // Ice
+            moves.add(new Moves("Aurora Beam", this.intPokemonType, true,65, 100));
+            moves.add(new Moves("Blizzard", this.intPokemonType, true, 120, 90));
+            moves.add(new Moves("Ice Beam", this.intPokemonType, true, 95, 100));
+            moves.add(new Moves("Ice Punch", this.intPokemonType, true, 75, 100));
         }
         else if(this.intPokemonType == 10){
-            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+            // Normal
+            moves.add(new Moves("Tackle", this.intPokemonType, false, 35, 95));
         }
         else if(this.intPokemonType == 11){
-            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+            // poison
+            moves.add(new Moves("Acid", this.intPokemonType, false, 40, 100));
+            moves.add(new Moves("Poison Sting", this.intPokemonType, false, 15, 100));
+            moves.add(new Moves("Sludge", this.intPokemonType, false, 65, 100));
+            moves.add(new Moves("Smog", this.intPokemonType, false, 20, 70));
         }
         
         else if(this.intPokemonType == 12){
-            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+            // psychic
+            moves.add(new Moves("Confusion", this.intPokemonType, true, 50, 100));
+            moves.add(new Moves("Psybeam", this.intPokemonType, true, 65, 100));
+            moves.add(new Moves("Psychic", this.intPokemonType, true, 90, 100));
         }
         else if(this.intPokemonType == 13){
-            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, false, movePower, Accuracy));
+            // rock
+            moves.add(new Moves("Rock Slide", this.intPokemonType, false, 75, 90));
+            moves.add(new Moves("Rock Throw", this.intPokemonType, false, 50, 65));
         }
         else if(this.intPokemonType == 14){
-            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
-            moves.add(new Moves("Name", this.intPokemonType, true, movePower, Accuracy));
+            // water
+            moves.add(new Moves("Bubble", this.intPokemonType, true, 20, 100));
+            moves.add(new Moves("Hydro Pump", this.intPokemonType, true, 120, 80));
+            moves.add(new Moves("Surf", this.intPokemonType, true, 95, 100));
+            moves.add(new Moves("Water Gun", this.intPokemonType, true, 40, 100));
         }
         
         
