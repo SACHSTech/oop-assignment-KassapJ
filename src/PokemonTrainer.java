@@ -43,6 +43,53 @@ public class PokemonTrainer{
         
     }
 
+    public String getPokemonName(int i){
+        return pkmn.get(i).getPokemonName();
+    }
+    public int getPokemonType(int i){
+        return pkmn.get(i).getPokemonType();
+    }
+    public int getPokemonLevel(int i){
+        return pkmn.get(i).getPokemonLevel();
+    }
+    public double getPokemonExp(int i){
+        return pkmn.get(i).getPokemonExp();
+    }
+    public double getPokemonMAXHP(int i){
+        return pkmn.get(i).getPokemonMAXHP();
+    }
+    public double getPokemonHP(int i){
+        return pkmn.get(i).getPokemonHP();
+    }
+    public int getPokemonAttack(int i){
+        return pkmn.get(i).getPokemonATTACK();
+    }
+    public int getPokemonDEF(int i){
+        return pkmn.get(i).getPokemonDEF();
+    }
+    public int getPokemonSPATTACK(int i){
+        return pkmn.get(i).getPokemonSPATTACK();
+    }
+    public int getPokemonSPDEF(int i){
+        return pkmn.get(i).getPokemonSPDEF();
+    }
+    public int getPokemonSPEED(int i){
+        return pkmn.get(i).getPokemonSPEED();
+    }
+    
+
+    public String getPokemonMoveName(int i, int move){
+        return pkmn.get(i).getMoveName(move);
+    }
+
+    public int getMovePower(int i, int move){
+        return pkmn.get(i).getMovePower(move);
+    }
+
+    public boolean getisWildPokemon(){
+        return this.isWildPkmn;
+    }
+
     public String getTrainerName(){
         return this.strTrainerName;
     }
@@ -62,7 +109,7 @@ public class PokemonTrainer{
     public void createWildPokemon(){
         // Random object
         Random rand = new Random();
-        this.pokemonCount = 1;
+            this.pokemonCount = 1;
             this.itemCount = 0;
             this.strTrainerName = "Wild Pokemon";
 

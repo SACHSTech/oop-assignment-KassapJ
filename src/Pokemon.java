@@ -30,9 +30,13 @@ public class Pokemon {
         this.intPokemonSPDEF = spdefense;
         this.intPokemonSPEED = speed;
         moves = new ArrayList<Moves>();
+
+        // Give the pokemon moves
+
+        createMoves();
     } 
 
-    public void createMove(){
+    public void createMoves(){
         if(this.intPokemonType == 0){
             // Bug 
             moves.add(new Moves("Leech Life", this.intPokemonType, false, 20, 100));
@@ -303,6 +307,15 @@ public class Pokemon {
         this.dblPokemonExp = x;
     }
 
+    public double getPokemonMAXHP(){
+        return this.dblPokemonMAXHP;
+    }
+
+    public void setPokemonMAXHP(double x){
+        this.dblPokemonMAXHP = x;
+    }
+
+
     public double getPokemonHP(){
         return this.dblPokemonHP;
     }
@@ -349,5 +362,13 @@ public class Pokemon {
 
     public void setPokemonSPEED(int x){
         this.intPokemonSPEED = x;
+    }
+
+    public String getMoveName(int i){
+        return moves.get(i).getMoveName();
+    }
+
+    public int getMovePower(int i){
+        return moves.get(i).getMovePower();
     }
 }

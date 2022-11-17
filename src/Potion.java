@@ -35,4 +35,15 @@ public class Potion extends Items{
     public double getdblHealPoints(){
         return this.dblHealPoints;
     }
+
+    public double usePotion(double maxHP, double HP){
+        double newHP = 0;
+
+        newHP += this.dblHealPoints;
+        if(newHP > maxHP){
+            newHP = maxHP;
+        }
+
+        return newHP;
+    }
 }
