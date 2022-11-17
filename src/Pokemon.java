@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 import javax.lang.model.element.TypeElement;
 
 public class Pokemon {
@@ -12,8 +14,11 @@ public class Pokemon {
     private int intPokemonSPATTACK;
     private int intPokemonSPDEF;
     private int intPokemonSPEED;
+    private ArrayList<Moves> moves;
 
     public Pokemon(String name, int type, int level, double exp, double hp, int attack, int defense, int spattack, int spdefense, int speed){
+        // Types of pokemon 0 = bug, 1 = dragon, 2 = electric, 3 = fighting, 4 = fire, 5 = flying, 6 = ghost, 7 = grass, 8 = ground, 9 = ice, 10 = normal, 11 = poison, 12 = psychic, 13 = rock, 14 = water
+        
         this.strPokemonName = name;
         this.intPokemonType = type;
         this.intPokemonLevel = level;
@@ -24,9 +29,23 @@ public class Pokemon {
         this.intPokemonSPATTACK = spattack;
         this.intPokemonSPDEF = spdefense;
         this.intPokemonSPEED = speed;
+        moves = new ArrayList<Moves>();
     } 
 
-    public void takeDamage(){
+    public void createMove(){
+        moves.add(new Moves("Name", Type, specialMove, movePower, Accuracy));
+    }
+
+    public void takeDamage(int power, boolean isSpecial, int opponentType){
+        // calculate multiplier based on type difference
+        int multiplier = 1; 
+
+        if(isSpecial){
+            this.dblPokemonHP -= ((power / (intPokemonSPDEF / 2)) * multiplier);
+        }
+        else{
+            this.dblPokemonHP -= ((power / (intPokemonDEF / 2)) * multiplier);
+        }
 
     }
 

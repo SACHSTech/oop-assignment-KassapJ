@@ -44,9 +44,6 @@ public class PokemonBattle{
 
         createTrainers();
 
-        if(isWildPokemon){
-            // create a wild pokemon to fight if we are fighting a wild pokemon
-        }
         
     }
 
@@ -88,7 +85,7 @@ public class PokemonBattle{
                     trainerBadges = Integer.parseInt(keyboard.readLine());
                 }
 
-                pkmnTrainers.add(new PokemonTrainer(trainerName, trainerBadges));
+                pkmnTrainers.add(new PokemonTrainer(trainerName, trainerBadges, false));
             }
             // second trainer is random
             else if(i == 1){
@@ -173,7 +170,10 @@ public class PokemonBattle{
                 }
 
                 // if gym leader, 8 badges
-                pkmnTrainers.add(new PokemonTrainer(strRandName, intRandBadges));
+                pkmnTrainers.add(new PokemonTrainer(strRandName, intRandBadges, false));
+            }
+            else if(this.isWildPokemon){
+                pkmnTrainers.add(new PokemonTrainer("Wild", 0, true));
             }
         }
     }

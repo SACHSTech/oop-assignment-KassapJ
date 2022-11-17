@@ -57,6 +57,11 @@ public class Pokeball extends Items{
         if(f >= this.N){
             return true;
         }
+        else if(this.intPokeballType == 3){
+            // return true if masterball
+            return true;
+        }
+
         return false;
     }
 }
