@@ -84,24 +84,21 @@ public class PokemonBattle{
         int trainer2count = 0;
         int attacking = 0;
         int defending = 0;
-        int count = 0;
         if(pkmnTrainers.get(0).getPokemonSPEED(trainer1count) >= pkmnTrainers.get(1).getPokemonSPEED(trainer2count)){
             // Variables that decide if the person attacking is index 0 or 1
             attacking = 0;
             defending = 1;
-            count = trainer1count;
         }
         else{
             attacking = 1;
             defending = 0;
-            count = trainer2count;
         }
         // get all the stats of the pokemon and the move its using
 
-        int movePower = pkmnTrainers.get(attacking).getMovePower(count, moveChoice);
-        boolean isSpecial = pkmnTrainers.get(attacking).getIsSpecial(count, moveChoice);
-        int attackerPokemonType = pkmnTrainers.get(attacking).getPokemonType(count);
-        int defenderPokemonType = pkmnTrainers.get(defending).getPokemonType(count);
+        int movePower = pkmnTrainers.get(0).getMovePower(trainer1count, moveChoice);
+        boolean isSpecial = pkmnTrainers.get(0).getIsSpecial(trainer1count, moveChoice);
+        int attackerPokemonType = pkmnTrainers.get(0).getPokemonType(trainer1count);
+        int defenderPokemonType = pkmnTrainers.get(0).getPokemonType(trainer1count);
         // input these stats and make the recieving pokemon take damage for it
         pkmnTrainers.get(defending).takeDamage(trainer1count, movePower, isSpecial, attackerPokemonType, defenderPokemonType);
         // check if a pokemon fainted

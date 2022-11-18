@@ -269,10 +269,10 @@ public class Pokemon {
         
 
         if(isSpecial){
-            this.dblPokemonHP -= ((power / (intPokemonSPDEF / 2)) * multiplier);
+            this.dblPokemonHP -= ((power / (intPokemonSPDEF / 8)) * multiplier);
         }
         else{
-            this.dblPokemonHP -= ((power / (intPokemonDEF / 2)) * multiplier);
+            this.dblPokemonHP -= ((power / (intPokemonDEF / 8)) * multiplier);
         }
 
         System.out.println(this.dblPokemonHP);

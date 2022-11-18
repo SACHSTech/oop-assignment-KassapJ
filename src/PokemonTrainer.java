@@ -125,7 +125,7 @@ public class PokemonTrainer{
             this.itemCount = 0;
             this.strTrainerName = "Wild Pokemon";
 
-            int randLevel = rand.nextInt(100 - 5 + 1) + 5;
+            int randLevel = rand.nextInt(100 - 50 + 1) + 50;
             double randExp = rand.nextDouble(50);
             //create random pokemon for this trainer
             // Create a random pokemon
