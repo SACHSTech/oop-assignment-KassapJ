@@ -43,6 +43,14 @@ public class PokemonTrainer{
         
     }
 
+    public void takeDamage(int i, int movePower, boolean isSpecial, int attackerPokemonType, int defenderPokemonType){
+        pkmn.get(i).takeDamage(movePower, isSpecial, attackerPokemonType, defenderPokemonType);
+    }
+
+    public int getMoveAmount(int i){
+        return pkmn.get(i).getMoveAmount();
+    }
+
     public String getPokemonName(int i){
         return pkmn.get(i).getPokemonName();
     }
@@ -84,6 +92,10 @@ public class PokemonTrainer{
 
     public int getMovePower(int i, int move){
         return pkmn.get(i).getMovePower(move);
+    }
+
+    public boolean getIsSpecial(int i, int move){
+        return pkmn.get(i).getIsSpecial(move);
     }
 
     public boolean getisWildPokemon(){
