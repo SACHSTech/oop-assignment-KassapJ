@@ -118,6 +118,10 @@ public class PokemonTrainer{
         this.intTrainerBadges = x;
     }
 
+    public int getPokemonAmount(){
+        return pkmn.size();
+    }
+
     public void createWildPokemon(){
         // Random object
         Random rand = new Random();

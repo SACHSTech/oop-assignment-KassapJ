@@ -141,7 +141,6 @@ public class Pokemon {
         // calculate multiplier based on type difference
         // Super eff = * 1.25, not effective = 0.8
         double multiplier = 1; 
-        System.out.println(this.dblPokemonHP);
         if(defenderType == 0){
             if(attackerType == 4 || attackerType == 5 || attackerType == 11 || attackerType == 13){
                 multiplier = 1.25;
@@ -269,13 +268,13 @@ public class Pokemon {
         
 
         if(isSpecial){
-            this.dblPokemonHP -= ((power / (intPokemonSPDEF / 8)) * multiplier);
+            this.dblPokemonHP -= ((power / (intPokemonSPDEF / 20)) * multiplier);
         }
         else{
-            this.dblPokemonHP -= ((power / (intPokemonDEF / 8)) * multiplier);
+            this.dblPokemonHP -= ((power / (intPokemonDEF / 20)) * multiplier);
         }
 
-        System.out.println(this.dblPokemonHP);
+        System.out.println(this.strPokemonName + " HP is: " + this.dblPokemonMAXHP + "/" + this.dblPokemonHP);
     }
 
     public String getPokemonName(){
