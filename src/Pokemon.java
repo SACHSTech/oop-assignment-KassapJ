@@ -24,6 +24,7 @@ public class Pokemon {
         this.intPokemonLevel = level;
         this.dblPokemonExp = exp;
         this.dblPokemonMAXHP = hp;
+        this.dblPokemonHP = hp;
         this.intPokemonAttack = attack;
         this.intPokemonDEF = defense;
         this.intPokemonSPATTACK = spattack;

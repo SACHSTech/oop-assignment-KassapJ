@@ -72,12 +72,11 @@ public class PokemonBattle{
             System.out.print(" 3 = " + pkmnTrainers.get(0).getPokemonMoveName(0, 2));
             System.out.println(" 4 = " + pkmnTrainers.get(0).getPokemonMoveName(0, 3));
         }
-        int moveChoice = Integer.parseInt(keyboard.readLine());
+        int moveChoice = Integer.parseInt(keyboard.readLine()) - 1;
         if(moveChoice > 4 || moveChoice < 1 || moveChoice > (pkmnTrainers.get(0).getMoveAmount(0) - 1)){
             System.out.print("Value not accepted");
-            moveChoice = Integer.parseInt(keyboard.readLine());
+            moveChoice = Integer.parseInt(keyboard.readLine()) - 1;
         }
-        moveChoice -= 1;
 
         // Roll a random move for the opponent and do the moves depending on which pokemon speed stat is faster
         // Count that decides what pokemon the trainers are at
