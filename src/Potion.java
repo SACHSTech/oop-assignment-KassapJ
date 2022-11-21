@@ -1,4 +1,9 @@
 public class Potion extends Items{
+    /**
+    * An extension of the items class, which holds the information an item might have, as well as
+    * giving extra functionality to heal a pokemon.
+    * @author John Matthew Kassapian
+    */
     private int intPotionType;
     private double dblHealPoints;
     public Potion(String name, int amount, int Type){

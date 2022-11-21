@@ -1,6 +1,11 @@
 import java.util.Random;
 
 public class Pokeball extends Items{
+    /**
+    * An extension of the items class, which holds the information an item might have, as well as
+    * giving extra functionality to catch a pokemon.
+    * @author John Matthew Kassapian
+    */
     private int intPokeballType;
     private double dblCatchRate;
     private int N;

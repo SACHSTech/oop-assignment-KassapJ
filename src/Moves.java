@@ -1,4 +1,8 @@
 public class Moves {
+    /**
+    * A class that holds the data of a pokemon's moves.
+    * @author John Matthew Kassapian
+    */
     private String strMoveName;
     private int intMoveType;
     private boolean isSpecial;

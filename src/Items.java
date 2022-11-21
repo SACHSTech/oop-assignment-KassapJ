@@ -1,4 +1,9 @@
 public class Items {
+    /**
+    * A class that holds the information of items a trainer may have
+    * @author John Matthew Kassapian
+    */
+
     private String strItemName;
     private int intItemAmount;
 
