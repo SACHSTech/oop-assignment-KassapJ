@@ -3,6 +3,13 @@ import java.util.ArrayList;
 import javax.lang.model.element.TypeElement;
 
 public class Pokemon {
+    /**
+    * A class that randomly generates moves a pokemon may have, as well as the process of them taking damage from it
+    * this class has the correct calculations to have each pokemon take more or less damage depending on the type difference.
+    * This class also generates random stats for the pokemon.
+    * @author John Matthew Kassapian
+    */
+
     private String strPokemonName;
     private int intPokemonType;
     private int intPokemonLevel;
@@ -268,10 +275,10 @@ public class Pokemon {
         
 
         if(isSpecial){
-            this.dblPokemonHP -= ((power / (intPokemonSPDEF / 20)) * multiplier);
+            this.dblPokemonHP -= (((power * 5) / (intPokemonSPDEF / 20)) * multiplier);
         }
         else{
-            this.dblPokemonHP -= ((power / (intPokemonDEF / 20)) * multiplier);
+            this.dblPokemonHP -= (((power * 5) / (intPokemonDEF / 20)) * multiplier);
         }
 
         System.out.println(this.strPokemonName + " HP is: " + this.dblPokemonMAXHP + "/" + this.dblPokemonHP);

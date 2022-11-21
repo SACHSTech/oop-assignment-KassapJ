@@ -2,6 +2,12 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class PokemonTrainer{
+    /**
+    * A class that creates a random amount of pokemon and items that a pokemon trainer may have
+    * this class is responsible for holding trainers information. and creating the name and type of their pokemon
+    * @author John Matthew Kassapian
+    */
+
     private String strTrainerName;
     private int intTrainerBadges;
     private boolean isWildPkmn;

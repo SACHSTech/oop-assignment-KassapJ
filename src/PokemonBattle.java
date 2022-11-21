@@ -3,6 +3,12 @@ import java.util.Random;
 import java.io.*;
 
 public class PokemonBattle{
+    /**
+    * A class that randomly generates and takes information from all the other classes, uses and compares the variables 
+    * to simulate a Pokemon Battle between 1-2 trainers OR a wild pokemon.
+    * @author John Matthew Kassapian
+    */
+
 
     private String strBackground;
     private boolean isWildPokemon;
@@ -56,6 +62,8 @@ public class PokemonBattle{
         int trainer2count = 0;
         int i = 0;
         int y = 0;
+        int n = 0;
+        int m = 0;
         while(trainer1count != pkmnTrainers.get(0).getPokemonAmount() || trainer2count != pkmnTrainers.get(1).getPokemonAmount()){
             // Battle Sequence
         // First define what kind of battle we're in, and if we can catch this pokemon
@@ -92,10 +100,14 @@ public class PokemonBattle{
                     // Variables that decide if the person attacking is index 0 or 1
                     i = 0;
                     y = 1;
+                    n = trainer2count;
+                    m = trainer1count;
                 }
                 else{
                     i = 1;
                     y = 0;
+                    n = trainer1count;
+                    m = trainer2count;
                 }
                 // get all the stats of the pokemon and the move its using
         
@@ -104,7 +116,8 @@ public class PokemonBattle{
                 int attackerPokemonType = pkmnTrainers.get(0).getPokemonType(trainer1count);
                 int defenderPokemonType = pkmnTrainers.get(0).getPokemonType(trainer1count);
                 // input these stats and make the recieving pokemon take damage for it
-                pkmnTrainers.get(i).takeDamage(trainer1count, movePower, isSpecial, attackerPokemonType, defenderPokemonType);
+                System.out.println(pkmnTrainers.get(y).getPokemonName(m) + " uses " + pkmnTrainers.get(y).getPokemonMoveName(m, moveChoice));
+                pkmnTrainers.get(i).takeDamage(n, movePower, isSpecial, attackerPokemonType, defenderPokemonType);
                 
                 // check if a pokemon fainted
                 if(pkmnTrainers.get(0).getPokemonHP(trainer1count) <= 0){
@@ -113,7 +126,8 @@ public class PokemonBattle{
                     break;
                 }
                 // next player attacks
-                pkmnTrainers.get(y).takeDamage(trainer1count, movePower, isSpecial, attackerPokemonType, defenderPokemonType);
+                System.out.println(pkmnTrainers.get(i).getPokemonName(n) + " uses " + pkmnTrainers.get(i).getPokemonMoveName(n, moveChoice));
+                pkmnTrainers.get(y).takeDamage(m, movePower, isSpecial, attackerPokemonType, defenderPokemonType);
                 // check if a pokemon fainted
                 if(pkmnTrainers.get(1).getPokemonHP(trainer1count) <= 0){
                     System.out.println(pkmnTrainers.get(1).getPokemonName(trainer2count) + " fainted.");
