@@ -28,10 +28,6 @@ public class PokemonTrainer{
         pokeballs = new ArrayList<Pokeball>();
         potions = new ArrayList<Potion>();
 
-        // Says the names of trainer and their badges
-        // System.out.println(this.strTrainerName);
-        // System.out.println(this.intTrainerBadges);
-
         // Random object
         Random rand = new Random();
 
@@ -49,85 +45,232 @@ public class PokemonTrainer{
         
     }
 
+    /**
+    * This method allows us to use the takeDamage method in the Pokemon Class
+    *
+    * @param int i being the index of the pokemon we want to access, int movePower being the power of the move, boolean isSpecial determining if the move is special or not, int attackerPokemonType representing the type of the move the attacking pokemon is using, int defenderPokemonType being the type of the defending pokemon
+    * @return N/A
+    */
     public void takeDamage(int i, int movePower, boolean isSpecial, int attackerPokemonType, int defenderPokemonType){
         pkmn.get(i).takeDamage(movePower, isSpecial, attackerPokemonType, defenderPokemonType);
     }
 
+    /**
+    * this method allows us to run the getMoveAmount method in the pokemon class
+    *
+    * @param int i which is the index of the pokemon we want to access
+    * @return int value representing the amount of moves the pokemon has
+    */
     public int getMoveAmount(int i){
         return pkmn.get(i).getMoveAmount();
     }
 
+    /**
+    * this method allows us to run the getPokemonName method in the pokemon class
+    *
+    * @param int i which is the index of the pokemon we want to access
+    * @return String value which is the Name of the pokemon
+    */
     public String getPokemonName(int i){
         return pkmn.get(i).getPokemonName();
     }
+
+    /**
+    * this method allows us to run the getPokemonType method in the pokemon class
+    *
+    * @param int i which is the index of the pokemon we want to access
+    * @return int value representing the type the pokemon is
+    */
     public int getPokemonType(int i){
         return pkmn.get(i).getPokemonType();
     }
+
+    /**
+    * this method allows us to run the getPokemonLevel method in the pokemon class
+    *
+    * @param int i which is the index of the pokemon we want to access
+    * @return int value representing the level of the pokemon
+    */
     public int getPokemonLevel(int i){
         return pkmn.get(i).getPokemonLevel();
     }
-    public double getPokemonExp(int i){
-        return pkmn.get(i).getPokemonExp();
-    }
-    public double getPokemonMAXHP(int i){
-        return pkmn.get(i).getPokemonMAXHP();
-    }
-    public double getPokemonHP(int i){
-        return pkmn.get(i).getPokemonHP();
-    }
-    public int getPokemonAttack(int i){
-        return pkmn.get(i).getPokemonATTACK();
-    }
-    public int getPokemonDEF(int i){
-        return pkmn.get(i).getPokemonDEF();
-    }
-    public int getPokemonSPATTACK(int i){
-        return pkmn.get(i).getPokemonSPATTACK();
-    }
-    public int getPokemonSPDEF(int i){
-        return pkmn.get(i).getPokemonSPDEF();
-    }
-    public int getPokemonSPEED(int i){
-        return pkmn.get(i).getPokemonSPEED();
-    }
-    
 
+    /**
+    * this method allows us to run the getMoveName method in the pokemon class
+    *
+    * @param int i which is the index of the pokemon we want to access
+    * @return String value representing the name of the move we want to access
+    */
     public String getPokemonMoveName(int i, int move){
         return pkmn.get(i).getMoveName(move);
     }
 
+    /**
+    * this method allows us to run the getMovePower method in the pokemon class
+    *
+    * @param int i which is the index of the pokemon we want to access
+    * @return int value representing the power stat of the move we want to access
+    */
     public int getMovePower(int i, int move){
         return pkmn.get(i).getMovePower(move);
     }
 
+    /**
+    * this method allows us to run the getIsSpecial method in the pokemon class
+    *
+    * @param int i which is the index of the pokemon we want to access
+    * @return boolean value representing the isSpecial property of the move we want to access
+    */
     public boolean getIsSpecial(int i, int move){
         return pkmn.get(i).getIsSpecial(move);
     }
 
+    /**
+    * this method allows us to run the getPokemonExp method in the pokemon class
+    *
+    * @param int i which is the index of the pokemon we want to access
+    * @return double value representing the exp points the pokemon has
+    */
+    public double getPokemonExp(int i){
+        return pkmn.get(i).getPokemonExp();
+    }
+
+    /**
+    * this method allows us to run the getPokemonMAXHP method in the pokemon class
+    *
+    * @param int i which is the index of the pokemon we want to access
+    * @return double value representing the pokemon's max HP
+    */
+    public double getPokemonMAXHP(int i){
+        return pkmn.get(i).getPokemonMAXHP();
+    }
+
+    /**
+    * this method allows us to run the getPokemonHP method in the pokemon class
+    *
+    * @param int i which is the index of the pokemon we want to access
+    * @return double value representing the pokemon's current HP
+    */
+    public double getPokemonHP(int i){
+        return pkmn.get(i).getPokemonHP();
+    }
+
+    /**
+    * this method allows us to run the getPokemonATTACK method in the pokemon class
+    *
+    * @param int i which is the index of the pokemon we want to access
+    * @return int value representing the pokemon's ATTACK stat
+    */
+    public int getPokemonAttack(int i){
+        return pkmn.get(i).getPokemonATTACK();
+    }
+
+    /**
+    * this method allows us to run the getPokemonDEF method in the pokemon class
+    *
+    * @param int i which is the index of the pokemon we want to access
+    * @return int value representing the pokemon's DEFENSE stat
+    */
+    public int getPokemonDEF(int i){
+        return pkmn.get(i).getPokemonDEF();
+    }
+
+    /**
+    * this method allows us to run the getPokemonSPATTACK method in the pokemon class
+    *
+    * @param int i which is the index of the pokemon we want to access
+    * @return int value representing the pokemon's SPECIAL ATTACK stat
+    */
+    public int getPokemonSPATTACK(int i){
+        return pkmn.get(i).getPokemonSPATTACK();
+    }
+
+    /**
+    * this method allows us to run the getPokemonSPDEF method in the pokemon class
+    *
+    * @param int i which is the index of the pokemon we want to access
+    * @return int value representing the pokemon's SPECIAL DEFENSE stat
+    */
+    public int getPokemonSPDEF(int i){
+        return pkmn.get(i).getPokemonSPDEF();
+    }
+    
+    /**
+    * this method allows us to run the getPokemonSPEED method in the pokemon class
+    *
+    * @param int i which is the index of the pokemon we want to access
+    * @return int value representing the pokemon's SPEED stat
+    */
+    public int getPokemonSPEED(int i){
+        return pkmn.get(i).getPokemonSPEED();
+    }
+
+    /**
+    * this method returns a boolean value that determines if the pokemon is wild or not
+    *
+    * @param N/A
+    * @return boolean isWildPkmn
+    */
     public boolean getisWildPokemon(){
         return this.isWildPkmn;
     }
 
+    /**
+    * this method returns the name of this trainer
+    *
+    * @param N/A
+    * @return String strTrainerName
+    */
     public String getTrainerName(){
         return this.strTrainerName;
     }
 
+    /**
+    * this method sets the name of this trainer
+    *
+    * @param String x, being the name we want for this trainer
+    * @return N/A
+    */
     public void setTrainerName(String x){
         this.strTrainerName = x;
     }
 
+    /**
+    * this method returns the amount of badges this trainer has
+    *
+    * @param N/A
+    * @return String strTrainerName
+    */
     public int getTrainerBadges(){
         return this.intTrainerBadges;
     }
 
+    /**
+    * this method sets the amount of badges this trainer has
+    *
+    * @param int x, the amount of badges we want this trainer to have
+    * @return N/A
+    */
     public void setTrainerBadges(int x){
         this.intTrainerBadges = x;
     }
 
+    /**
+    * this method returns the amount of pokemon this trainer has
+    *
+    * @param N/A
+    * @return int that represents the amount of pokemon.
+    */
     public int getPokemonAmount(){
         return pkmn.size();
     }
 
+    /**
+    * this method generates a randomPokemon this "trainer" may have.
+    *
+    * @param N/A
+    * @return N/A
+    */
     public void createWildPokemon(){
         // Random object
         Random rand = new Random();

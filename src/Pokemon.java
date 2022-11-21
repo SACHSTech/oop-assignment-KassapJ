@@ -154,7 +154,7 @@ public class Pokemon {
     /**
     * This method allows the pokemon to take damage, as well as print the HP that the pokemon has left
     *
-    * @param N/A
+    * @param int movePower being the power of the move, boolean isSpecial determining if the move is special or not, int attackerPokemonType representing the type of the move the attacking pokemon is using, int defenderPokemonType being the type of the defending pokemon
     * @return N/A
     */
     public void takeDamage(int power, boolean isSpecial, int attackerType, int defenderType){
@@ -320,99 +320,242 @@ public class Pokemon {
         this.strPokemonName = x;
     }
     
+    /**
+    * This method returns the type of the pokemon
+    *
+    * @param N/A
+    * @return int intPokemonType;
+    */
     public int getPokemonType(){
         return this.intPokemonType;
     }
 
+    /**
+    * This method allows to set the type for this pokemon
+    *
+    * @param int x being the int of the type we want to change it to
+    * @return N/A
+    */
     public void setPokemonType(int x){
         this.intPokemonType = x;
     }
 
+    /**
+    * This method returns the int value we use to describe the level of the pokemon
+    *
+    * @param N/A
+    * @return int intPokemonLevel
+    */
     public int getPokemonLevel(){
         return this.intPokemonLevel;
     }
 
+    /**
+    * This method allows us to set the level of the pokemon
+    *
+    * @param int x, being the level we want for the pokemon
+    * @return N/A;
+    */
     public void setPokemonLevel(int x){
         this.intPokemonLevel = x;
     }
 
+    /**
+    * This method returns the EXP level the pokemon has
+    *
+    * @param N/A
+    * @return double dblPokemonExp
+    */
     public double getPokemonExp(){
         return this.dblPokemonExp;
     }
 
+    /**
+    * This method allows us to set the EXP level of the pokemon
+    *
+    * @param double x, being the EXP level we want for the pokemon
+    * @return N/A
+    */
     public void setPokemonExp(double x){
         this.dblPokemonExp = x;
     }
 
+    /**
+    * This method allows us to get the value of the MAXHP of this pokemon
+    *
+    * @param N/A
+    * @return double dblPokemonMAXHP
+    */
     public double getPokemonMAXHP(){
         return this.dblPokemonMAXHP;
     }
 
+    /**
+    * This method allows us to set the MAX HP value of the pokemon
+    *
+    * @param double x, being the MAX HP value for the pokemon
+    * @return N/A
+    */
     public void setPokemonMAXHP(double x){
         this.dblPokemonMAXHP = x;
     }
 
-
+    /**
+    * This method returns the value of the Pokemon's current HP
+    *
+    * @param N/A
+    * @return double dblPokemonHP
+    */
     public double getPokemonHP(){
         return this.dblPokemonHP;
     }
 
+    /**
+    * This value allows us to set the pokemon's current HP
+    *
+    * @param double x, which is the value we want for the pokemon's HP
+    * @return N/A
+    */
     public void setPokemonHP(double x){
         this.dblPokemonHP = x;
     }
 
+    /**
+    * This method returns the ATTACK stat of the pokemon
+    *
+    * @param N/A
+    * @return int intPokemonAttack
+    */
     public int getPokemonATTACK(){
         return this.intPokemonAttack;
     }
 
+    /**
+    * This method allows us to set the ATTACK stat of the pokemon
+    *
+    * @param int x, being the attack stat for the pokemon
+    * @return N/A
+    */
     public void setPokemonATTACK(int x){
         this.intPokemonAttack = x;
     }
 
+    /**
+    * This method returns the DEFENSE stat of the pokemon
+    *
+    * @param N/A
+    * @return int intPokemonDEF
+    */
     public int getPokemonDEF(){
         return this.intPokemonDEF;
     }
 
+    /**
+    * This method allows us to set the DEFENSE stat of the pokemon
+    *
+    * @param int x, being the DEFENSE stat for the pokemon
+    * @return N/A
+    */
     public void setPokemonDEF(int x){
         this.intPokemonDEF = x;
     }
 
+    /**
+    * This method returns the SPECIAL ATTACK stat of the pokemon
+    *
+    * @param N/A
+    * @return int intPokemonSPATTACK
+    */
     public int getPokemonSPATTACK(){
         return this.intPokemonSPATTACK;
     }
 
+    /**
+    * This method allows us to set the SPECIAL ATTACK stat of the pokemon
+    *
+    * @param int x, being the SPECIAL ATTACK stat for the pokemon
+    * @return N/A
+    */
     public void setPokemonSPATTACK(int x){
         this.intPokemonSPATTACK = x;
     }
 
+    /**
+    * This method returns the SPECIAL DEFENSE stat of the pokemon
+    *
+    * @param N/A
+    * @return int intPokemonSPDEF
+    */
     public int getPokemonSPDEF(){
         return this.intPokemonSPDEF;
     }
 
+    /**
+    * This method allows us to set the SPECIAL DEFENSE stat of the pokemon
+    *
+    * @param int x, being the SPECIAL DEFENSE stat for the pokemon
+    * @return N/A
+    */
     public void setPokemonSPDEF(int x){
         this.intPokemonSPDEF = x;
     }
 
+    /**
+    * This method returns the SPEED stat of the pokemon
+    *
+    * @param N/A
+    * @return int intPokemonSPEED
+    */
     public int getPokemonSPEED(){
         return this.intPokemonSPEED;
     }
 
+    /**
+    * This method allows us to set the SPEED stat of the pokemon
+    *
+    * @param int x, being the SPEED stat for the pokemon
+    * @return N/A
+    */
     public void setPokemonSPEED(int x){
         this.intPokemonSPEED = x;
-    }
+    }  
 
+    /**
+    * This method allows us to get the movename of one of the pokemons move
+    *
+    * @param int x, being the index of the move in the arraylist we want to access
+    * @return String value representing the name of the move
+    */
     public String getMoveName(int i){
         return moves.get(i).getMoveName();
     }
 
+    /**
+    * This method allows us to get the movePower stat of one of the pokemons move
+    *
+    * @param int x, being the index of the move in the arraylist we want to access
+    * @return int value representing the power stat of the move
+    */
     public int getMovePower(int i){
         return moves.get(i).getMovePower();
     }
 
+    /**
+    * This method allows us to determine if one of the pokemons move's is special
+    *
+    * @param int x, being the index of the move in the arraylist we want to access
+    * @return boolean value that represents if the move is special or not
+    */
     public boolean getIsSpecial(int i){
         return moves.get(i).getIsSpecial();
     }
 
+    /**
+    * This method returns the amount of moves the pokemon has
+    *
+    * @param int x, being the index of the move in the arraylist we want to access
+    * @return moves.size(), the length of the arraylist Moves
+    */
     public int getMoveAmount(){
         return moves.size();
     }

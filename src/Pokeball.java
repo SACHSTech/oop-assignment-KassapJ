@@ -42,15 +42,32 @@ public class Pokeball extends Items{
         }
     }
     
+    /**
+    * this method returns an int value which represent which type of pokeball this is
+    *
+    * @param N/A
+    * @return int intPokeballType
+    */
     public int getPokeballType(){
         return this.intPokeballType;
     }
+
+    /**
+    * this method sets the type of pokeball this is
+    *
+    * @param int x, which is the int value to give this pokeball 
+    * @return N/A
+    */
     public void setPokeballType(int x){
         this.intPokeballType = x;
     }
-    public double getCatchRate(){
-        return this.N;
-    }
+
+    /**
+    * this pokeball runs the calculations to see if the trainer was successful in catching a wild pokemon
+    *
+    * @param double MaxHP, which is the opposing wild pokemon's max hp value, double HP, which is the opposing wild pokemon's current hp value
+    * @return boolean value that represents if the pokemon was caught or not
+    */
     public boolean usePokeball(double MaxHP, double HP){
         double f = 0;
 
