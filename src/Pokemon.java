@@ -275,13 +275,16 @@ public class Pokemon {
         
 
         if(isSpecial){
-            this.dblPokemonHP -= (((power * 5) / (intPokemonSPDEF / 20)) * multiplier);
+            this.dblPokemonHP -= (((power * 5) - (intPokemonSPDEF * 3)) * multiplier);
         }
         else{
-            this.dblPokemonHP -= (((power * 5) / (intPokemonDEF / 20)) * multiplier);
+            this.dblPokemonHP -= (((power * 5) - (intPokemonDEF * 3)) * multiplier);
         }
 
-        System.out.println(this.strPokemonName + " HP is: " + this.dblPokemonMAXHP + "/" + this.dblPokemonHP);
+        if(this.dblPokemonHP > 0){
+            System.out.println(this.strPokemonName + " HP is: " + this.dblPokemonMAXHP + "/" + this.dblPokemonHP);
+        }
+        
     }
 
     public String getPokemonName(){
