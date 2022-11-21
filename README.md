@@ -3,7 +3,8 @@
 
 # Pokemon Battle Simulator
  
-![Screenshot 2022-11-17 190152](https://user-images.githubusercontent.com/95876055/202585883-4d9ceb25-ab59-41d7-8a24-53f610995500.png)
+![Pokemon Game System drawio](https://user-images.githubusercontent.com/95876055/203157762-1ea79d3d-d91b-4a14-8f8e-50e8aeca9d5c.png)
+
 
 ## Summary
 ### The system that I've demonstrated in my code is a simulation of a random pokemon battle. It functions pretty similar to an actual battle, featuring the actual equations for catching a pokemon. With 7 classes, my code will generate a random battle, 1-2 random trainers, a possible wild pokemon, 1-6 random pokemon for each trainer, 1-4 random moves for each pokemon, and each trainer will get a random amount of items they get to use. 
