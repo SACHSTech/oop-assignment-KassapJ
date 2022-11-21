@@ -165,22 +165,55 @@ public class PokemonBattle{
         
     }
 
+
+    /**
+    * Method that gets the background of the battle
+    *
+    * @param N/A
+    * @return String strBackground
+    */
     public String getBackground(){
         return strBackground;
     }
 
+    /**
+    * Method that returns if the battle involves a wild pokemon
+    *
+    * @param N/A
+    * @return boolean isWildPokemon
+    */
     public boolean getIsWildPokemon(){
         return isWildPokemon;
     }
 
+    /**
+    * Method that returns if the battle is a gym battle
+    * this is used to determine if we give the trainer a badge at the end of the battle
+    * @param N/A
+    * @return boolean isGymBattle
+    */
     public boolean getIsGymBattle(){
         return isGymBattle;
     }
     
+    /**
+    * Returns the number of pokemon trainers in this battle
+    *
+    * @param N/A
+    * @return pkmnTrainerCount
+    */
     public int getPkmnTrainerNum(){
         return pkmnTrainerCount;
     }
 
+    /**
+    * Method that creates the trainers/wild pokemon that will be
+    * involved in this pokemon battle. It generates random properties for these pokemon.
+    * This method also allows the user to input their name and badge count
+    *
+    * @param N/A
+    * @return N/A
+    */
     public void createTrainers() throws IOException{
         // Create an instance of the Random class
         Random rand = new Random();

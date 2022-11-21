@@ -44,6 +44,13 @@ public class Pokemon {
         createMoves();
     } 
 
+    /**
+    * This method creates random moves for this pokemon. These are all real moves from the game
+    * Each move has the same properties as in the game.
+    *
+    * @param N/A
+    * @return N/A
+    */
     public void createMoves(){
         if(this.intPokemonType == 0){
             // Bug 
@@ -144,6 +151,12 @@ public class Pokemon {
         
     }
 
+    /**
+    * This method allows the pokemon to take damage, as well as print the HP that the pokemon has left
+    *
+    * @param N/A
+    * @return N/A
+    */
     public void takeDamage(int power, boolean isSpecial, int attackerType, int defenderType){
         // calculate multiplier based on type difference
         // Super eff = * 1.25, not effective = 0.8
@@ -287,10 +300,22 @@ public class Pokemon {
         
     }
 
+    /**
+    * This method returns the name of the pokemon
+    *
+    * @param N/A
+    * @return String strPokemonName;
+    */
     public String getPokemonName(){
         return this.strPokemonName;
     }
 
+    /**
+    * This method allows the ability to set the name of the pokemon
+    *
+    * @param N/A
+    * @return N/A
+    */
     public void setPokemonName(String x){
         this.strPokemonName = x;
     }
