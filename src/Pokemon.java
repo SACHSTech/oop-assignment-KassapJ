@@ -275,10 +275,10 @@ public class Pokemon {
         
 
         if(isSpecial){
-            this.dblPokemonHP -= (((power * 5) - (intPokemonSPDEF * 3)) * multiplier);
+            this.dblPokemonHP -= ((((power * 5) + 1) / ((intPokemonSPDEF / 20) + 1)) * multiplier);
         }
         else{
-            this.dblPokemonHP -= (((power * 5) - (intPokemonDEF * 3)) * multiplier);
+            this.dblPokemonHP -= ((((power * 5) + 1) / ((intPokemonDEF / 20)) + 1) * multiplier);
         }
 
         if(this.dblPokemonHP > 0){

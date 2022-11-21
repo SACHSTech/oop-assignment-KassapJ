@@ -60,7 +60,8 @@ public class PokemonBattle{
         // Count that decides what pokemon the trainers are at
         int trainer1count = 0;
         int trainer2count = 0;
-        while(trainer1count < pkmnTrainers.get(0).getPokemonAmount() || trainer2count < pkmnTrainers.get(1).getPokemonAmount()){
+        int moveChoice = 0;
+        while(trainer1count < pkmnTrainers.get(0).getPokemonAmount() &&  trainer2count < pkmnTrainers.get(1).getPokemonAmount()){
             // Battle Sequence
         // First define what kind of battle we're in, and if we can catch this pokemon
         System.out.println(pkmnTrainers.get(0).getTrainerName() + " has " + (pkmnTrainers.get(0).getPokemonAmount() - trainer1count) + " pokemon.");
@@ -73,39 +74,41 @@ public class PokemonBattle{
         else{
             System.out.println(pkmnTrainers.get(1).getTrainerName() + " sends out " + pkmnTrainers.get(1).getPokemonName(trainer2count) + ".");
         }
-            while(pkmnTrainers.get(0).getPokemonHP(trainer1count) >= 0 || pkmnTrainers.get(1).getPokemonHP(trainer2count) >= 0){
+        while(pkmnTrainers.get(0).getPokemonHP(trainer1count) >= 0 && pkmnTrainers.get(1).getPokemonHP(trainer2count) >= 0){
                 // Throw out the first pokemon, let them do moves, higher speed goes first, when HP reaches 0 throw out next pokemon
-        System.out.print("Choose a move: 1 = " + pkmnTrainers.get(0).getPokemonMoveName(trainer1count, 0));
-        if(pkmnTrainers.get(0).getMoveAmount(0) == 2){
-            System.out.println(" 2 = " + pkmnTrainers.get(0).getPokemonMoveName(trainer1count, 1));
-        }
-        else if(pkmnTrainers.get(0).getMoveAmount(0) == 3){
-            System.out.print(" 2 = " + pkmnTrainers.get(0).getPokemonMoveName(trainer1count, 1));
-            System.out.println(" 3 = " + pkmnTrainers.get(0).getPokemonMoveName(trainer1count, 2));
-        }
-        else if(pkmnTrainers.get(0).getMoveAmount(0) == 4){
-            System.out.print(" 2 = " + pkmnTrainers.get(0).getPokemonMoveName(trainer1count, 1));
-            System.out.print(" 3 = " + pkmnTrainers.get(0).getPokemonMoveName(trainer1count, 2));
-            System.out.println(" 4 = " + pkmnTrainers.get(0).getPokemonMoveName(trainer1count, 3));
-        }
-        int moveChoice = Integer.parseInt(keyboard.readLine()) - 1;
-        if(moveChoice < 0 || moveChoice > (pkmnTrainers.get(0).getMoveAmount(0) - 1)){
-            System.out.print("Value not accepted");
-            moveChoice = Integer.parseInt(keyboard.readLine()) - 1;
-        }
+            System.out.println("Choose a move: 1 = " + pkmnTrainers.get(0).getPokemonMoveName(trainer1count, 0));
+            if(pkmnTrainers.get(0).getMoveAmount(trainer1count) == 2){
+                System.out.println(" 2 = " + pkmnTrainers.get(0).getPokemonMoveName(trainer1count, 1));
+            }
+            else if(pkmnTrainers.get(0).getMoveAmount(trainer1count) == 3){
+                System.out.print(" 2 = " + pkmnTrainers.get(0).getPokemonMoveName(trainer1count, 1));
+                System.out.println(" 3 = " + pkmnTrainers.get(0).getPokemonMoveName(trainer1count, 2));
+            }
+            else if(pkmnTrainers.get(0).getMoveAmount(trainer1count) == 4){
+                System.out.print(" 2 = " + pkmnTrainers.get(0).getPokemonMoveName(trainer1count, 1));
+                System.out.print(" 3 = " + pkmnTrainers.get(0).getPokemonMoveName(trainer1count, 2));
+                System.out.println(" 4 = " + pkmnTrainers.get(0).getPokemonMoveName(trainer1count, 3));
+            }
+            moveChoice = Integer.parseInt(keyboard.readLine());
+            while(moveChoice < 0 || moveChoice > (pkmnTrainers.get(0).getMoveAmount(0))){
+                System.out.print("Value not accepted");
+                moveChoice = Integer.parseInt(keyboard.readLine());
+            }
 
-        // get all the stats of the pokemon and the move its using
+            moveChoice -= 1;
+
+            // get all the stats of the pokemon and the move its using
         
-        int movePower1 = pkmnTrainers.get(0).getMovePower(trainer1count, moveChoice);
-        boolean isSpecial1 = pkmnTrainers.get(0).getIsSpecial(trainer1count, moveChoice);
-        int attackerPokemonType1 = pkmnTrainers.get(0).getPokemonType(trainer1count);
-        int defenderPokemonType1 = pkmnTrainers.get(0).getPokemonType(trainer1count);
+                int movePower1 = pkmnTrainers.get(0).getMovePower(trainer1count, moveChoice);
+                boolean isSpecial1 = pkmnTrainers.get(0).getIsSpecial(trainer1count, moveChoice);
+                int attackerPokemonType1 = pkmnTrainers.get(0).getPokemonType(trainer1count);
+                int defenderPokemonType1 = pkmnTrainers.get(0).getPokemonType(trainer1count);
 
-        int randMove = rand.nextInt(pkmnTrainers.get(1).getMoveAmount(0));
-        int movePower2 = pkmnTrainers.get(1).getMovePower(trainer2count, randMove);
-        boolean isSpecial2 = pkmnTrainers.get(1).getIsSpecial(trainer2count, randMove);
-        int attackerPokemonType2 = pkmnTrainers.get(1).getPokemonType(trainer2count);
-        int defenderPokemonType2 = pkmnTrainers.get(1).getPokemonType(trainer2count);
+                int randMove = rand.nextInt(pkmnTrainers.get(1).getMoveAmount(trainer2count) - 1);
+                int movePower2 = pkmnTrainers.get(1).getMovePower(trainer2count, randMove);
+                boolean isSpecial2 = pkmnTrainers.get(1).getIsSpecial(trainer2count, randMove);
+                int attackerPokemonType2 = pkmnTrainers.get(1).getPokemonType(trainer2count);
+                int defenderPokemonType2 = pkmnTrainers.get(1).getPokemonType(trainer2count);
 
                 if(pkmnTrainers.get(0).getPokemonSPEED(trainer1count) >= pkmnTrainers.get(1).getPokemonSPEED(trainer2count)){
                         // Decide if trainer1 goes first or if trainer2 goes first
@@ -129,14 +132,14 @@ public class PokemonBattle{
                         break;
                     }
                 }
-                else{
+                else if(pkmnTrainers.get(1).getPokemonSPEED(trainer2count) >= pkmnTrainers.get(0).getPokemonSPEED(trainer1count)){
                     // input these stats and make the recieving pokemon take damage for it
                     System.out.println(pkmnTrainers.get(1).getPokemonName(trainer2count) + " uses " + pkmnTrainers.get(1).getPokemonMoveName(trainer2count, randMove));
-                    pkmnTrainers.get(1).takeDamage(trainer1count, movePower2, isSpecial2, attackerPokemonType2, defenderPokemonType1);
+                    pkmnTrainers.get(0).takeDamage(trainer1count, movePower2, isSpecial2, attackerPokemonType2, defenderPokemonType1);
                     // check if a pokemon fainted
-                    if(pkmnTrainers.get(1).getPokemonHP(trainer1count) <= 0){
-                        System.out.println(pkmnTrainers.get(1).getPokemonName(trainer2count) + " fainted.");
-                        trainer2count++;
+                    if(pkmnTrainers.get(0).getPokemonHP(trainer1count) <= 0){
+                        System.out.println(pkmnTrainers.get(0).getPokemonName(trainer1count) + " fainted.");
+                        trainer1count++;
                         break;
                     }
                     // next player attacks
@@ -144,9 +147,9 @@ public class PokemonBattle{
                     pkmnTrainers.get(1).takeDamage(trainer2count, movePower1, isSpecial1, attackerPokemonType1, defenderPokemonType2);
                     
                     // check if a pokemon fainted
-                    if(pkmnTrainers.get(0).getPokemonHP(trainer1count) <= 0){
-                        System.out.println(pkmnTrainers.get(0).getPokemonName(trainer1count) + " fainted.");
-                        trainer1count++;
+                    if(pkmnTrainers.get(1).getPokemonHP(trainer2count) <= 0){
+                        System.out.println(pkmnTrainers.get(1).getPokemonName(trainer2count) + " fainted.");
+                        trainer2count++;
                         break;
                     }
                 }
